@@ -1,3 +1,52 @@
-.simulation-display {
+/* src/components/SimulationDisplay/SimulationDisplay.scss */
 
+/* Conteneur global de la grille centré horizontalement */
+.simulation-display {
+  /* On utilise flex-column pour disposer les lignes verticalement */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* On peut ajouter un peu de marge pour aérer */
+  margin: 1rem auto;
+  padding: 1rem;
+  /* Pour que la grille s'adapte à l'écran, on peut fixer un max-width et un max-height */
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* Chaque ligne de la grille */
+.grid-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Chaque cellule de la grille */
+.grid-cell {
+  /* La cellule s'étend en fonction de l'espace disponible.
+     On lui impose une taille minimum pour ne pas avoir une case trop petite */
+  flex: 1 1 auto;
+  min-width: 10px;
+  min-height: 10px;
+  /* Aspect ratio pour garder la cellule en carré */
+  aspect-ratio: 1;
+  border: 1px solid #ddd;
+  /* Pour centrer le contenu éventuellement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Couleurs selon l'état de la cellule */
+.grid-cell.idle {
+  background-color: green;
+}
+
+.grid-cell.onfire {
+  background-color: red;
+}
+
+.grid-cell.burned {
+  background-color: #A9A9A9; /* Gris cendré */
 }

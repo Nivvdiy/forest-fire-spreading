@@ -1,11 +1,19 @@
+import { defineComponent, toRefs } from 'vue';
 
-import { Component, Vue, toNative } from 'vue-facing-decorator'
+export default defineComponent({
+  name: 'SimulationDisplay',
+  props: {
+    gridData: {
+      type: Array,
+      required: true
+    }
+  },
+  setup(props) {
 
+    const { gridData } = toRefs(props);
 
-@Component
-class SimulationDisplay extends Vue {
-
-}
-
-export default toNative(SimulationDisplay);
-
+    return {
+      gridData
+    };
+  }
+});

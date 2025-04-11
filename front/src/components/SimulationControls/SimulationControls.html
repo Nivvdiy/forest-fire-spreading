@@ -1,5 +1,32 @@
-
-<section class="simulation-controls">
-  <h1>simulation-controls Component</h1>
-</section>
-
+<div class="simulation-controls">
+  <div class="buttons">
+    <button @click="toggleSimulation" :disabled="simulationFinished">
+      {{ simulationFinished ? 'Simulation Finished' : (isPlaying ? 'Pause' : 'Play') }}
+    </button>
+    <button @click="nextStep" :disabled="simulationFinished || isPlaying">Next</button>
+    <button @click="regenerateGrid">Regenerate</button>
+  </div>
+  <div class="forceSize">
+    <div class="forceSize-checkbox">
+      <label for="forceSize">Force Size:</label>
+      <input type="checkbox" id="forceSize" v-model="forceSize" />
+    </div>
+    <div class="forceSize-buttons" v-if="forceSize">
+      <label for="height">Height:</label>
+      <input type="number" id="height" v-model="height" max="100" min="1" />
+      <label for="width">Width:</label>
+      <input type="number" id="width" v-model="width" max="100" min="1" />
+    </div>
+  </div>
+  <div class="speed-control">
+    <div class="speed-title">Speed</div>
+    <div class="speed-slider">
+      <button class="arrow-button" @click="decreaseSpeed" :disabled="speed <= 1">←</button>
+      <div class="slider-track">
+        <div class="slider-handle" :style="{ left: handleLeft }"></div>
+      </div>
+      <button class="arrow-button" @click="increaseSpeed" :disabled="speed >= 4">→</button>
+    </div>
+    <div class="speed-label">{{ 'X' + speed }}</div>
+  </div>
+</div>

@@ -1,5 +1,14 @@
-
-<section class="simulation-display">
-  <h1>simulation-display Component</h1>
-</section>
-
+<div class="simulation-display">
+  <div v-for="row in gridData" :key="row.id" class="grid-row">
+    <span 
+      v-for="cell in row.cells" 
+      :key="cell.id" 
+      class="grid-cell"
+      :class="{
+        idle: cell.state === 'Idle',
+        onfire: cell.state === 'OnFire',
+        burned: cell.state === 'Burned'
+      }">
+    </span>
+  </div>
+</div>

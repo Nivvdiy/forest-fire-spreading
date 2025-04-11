@@ -1,0 +1,9 @@
+simulation:
+  width: 10
+  height: 10
+  propagationProbability: 1.0
+  initialFirePositions:
+    - "0,0"
+    - "9,9"
+    - "0,9"
+    - "9,0"

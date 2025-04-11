@@ -1,5 +1,29 @@
-# Vue 3 + TypeScript + Vite
+# Forest Fire Spreading Simulator - Frontend  
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is the frontend part of the **Forest Fire Spreading Simulator** project. It is a web-based application that simulates the spread of fire in a forest using interactive visualizations.  
+``  
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Getting Started  
+
+### Prerequisites  
+- Node.js (v16 or higher)  
+- npm or yarn  
+
+### Installation  
+1. Clone the repository:  
+	 ```bash  
+	 git clone https://github.com/your-username/forest-fire-spreading.git  
+	 cd forest-fire-spreading/front  
+	 ```  
+
+2. Install dependencies:  
+	 ```bash  
+	 npm install  
+	 ```  
+
+3. Start the development server:  
+	 ```bash  
+	 npm run dev  
+	 ```  
+
+4. Open your browser and navigate to `http://localhost:5173`.  

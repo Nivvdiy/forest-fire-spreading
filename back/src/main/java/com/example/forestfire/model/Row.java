@@ -7,8 +7,8 @@ import java.util.List;
 
 public class Row {
 	
-	private int y;
-	private List<Cell> cells = new ArrayList<>();
+    private int y;
+    private List<Cell> cells = new ArrayList<>();
 	
 	public Row() {}
 	
@@ -21,9 +21,18 @@ public class Row {
 		Collections.sort(cells, Comparator.comparingInt(Cell::getX));
 	}
 	
-	public List<Cell> getCells() {
-		return cells;
-	}
+    public List<Cell> getCells() {
+        return cells;
+    }
+
+    public void setCells(List<Cell> cells) {
+        if (cells == null) {
+            this.cells = new ArrayList<>();
+        } else {
+            this.cells = new ArrayList<>(cells);
+            Collections.sort(this.cells, Comparator.comparingInt(Cell::getX));
+        }
+    }
 	
 	public Cell getCell(int x) {
 		return cells.get(x);

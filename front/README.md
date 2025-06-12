@@ -1,7 +1,6 @@
 # Forest Fire Spreading Simulator - Frontend  
 
 This is the frontend part of the **Forest Fire Spreading Simulator** project. It is a web-based application that simulates the spread of fire in a forest using interactive visualizations.  
-``  
 
 ## Getting Started  
 
